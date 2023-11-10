@@ -26,20 +26,20 @@ You can train the model using the following command:
 `python geopd_dti.py --dataset_name davis --mode train --fold 0 --hidden_dim 128 --num_epoch 1000 --batch_size 256 --lr 0.001 --seed 0 --device cuda`
 
 Here's the explanation of the arguments:
-* `--dataset_name`: the name of the dataset you want to use, it can be `davis` or `kiba`
-* `--mode`: running mode, which can be `train`, `test`, or `train_valid`, for training, test, or five-fold cross validation, respectively
-* `--fold`: the cross validation fold, can be 0, 1, 2, 3, 4, only activated in `train_valid` mode
-* `--hidden_dim`: the hidden dimensionality of the model
-* `--num_epoch`: the number of epochs you want to run for training or cross validation. In `test` mode, it represents the number of epochs for which the loaded model was trained. In `train`, the model will be saved after `num_epoch` epochs
-* `--batch_size`: the size of the batch
-* `--lr`: the (base) learning rate. Note that we use cyclic learning rate scheduling during training
-* `--seed`: the seed to control the generation of random numbers during training
+* `--dataset_name`: the name of the dataset you want to use, and it can be `davis` or `kiba`.
+* `--mode`: running mode, which can be `train`, `test`, or `train_valid`, for training, test, or five-fold cross validation, respectively.
+* `--fold`: the cross validation fold, can be 0, 1, 2, 3, 4, only activated in `train_valid` mode.
+* `--hidden_dim`: the hidden dimensionality of the model.
+* `--num_epoch`: the number of epochs you want to run for training or cross validation. In `test` mode, it represents the number of epochs for which the loaded model was trained. In `train` mode, the model will be saved after `num_epoch` epochs.
+* `--batch_size`: the size of the batch.
+* `--lr`: the (base) learning rate. Note that we use cyclic learning rate scheduling during training.
+* `--seed`: the random seed.
 * `--device`: the device on which the model will be run, e.g., `cuda`, `cuda:1`, `cpu`, etc. We recommend you to run the model on GPU to avoid unnecessary trouble.
 
 You can test the model using the following command:
 `python geopd_dti.py --dataset_name davis --mode test --fold 0 --hidden_dim 128 --num_epoch 300 --batch_size 256 --lr 0.001 --seed 0 --device cuda`
 
-The model file `fmodel/model_{dataset_name}_{num_epoch}_{seed}.pt` will be loaded for test.
+The model file `model/model_{dataset_name}_{num_epoch}_{seed}.pt` will be loaded for test.
 
 You can do cross validation using the following command:
 `python geopd_dti.py --dataset_name davis --mode train_valid --fold 0 --hidden_dim 128 --num_epoch 1000 --batch_size 256 --lr 0.001 --seed 0 --device cuda`
