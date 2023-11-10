@@ -44,5 +44,3 @@ The model file `model/model_{dataset_name}_{num_epoch}_{seed}.pt` will be loaded
 You can do cross validation using the following command:
 `python geopd_dti.py --dataset_name davis --mode train_valid --fold 0 --hidden_dim 128 --num_epoch 1000 --batch_size 256 --lr 0.001 --seed 0 --device cuda`
 
-## License
-MIT
