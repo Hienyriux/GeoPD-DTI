@@ -10,7 +10,7 @@ Graph Neural Networks with Geometric Edge Fusion and Point Downsampling for Drug
 ## Usage
 
 ### Data Preprocessing
-Please download the [dataset](https://drive.google.com/file/d/1IR-T8ehx0Uy7izxnOS8EM71OocL-mC3Z/view?usp=drive_link) and [model](https://drive.google.com/file/d/1Y7bAdPmkY_a61ixDoBTRxWgVmY9tFNIy/view?usp=drive_link) files and unzip them. If you successfully downloaded and unzipped the files, you can skip the following data preprocessing steps and directly run the commands that will be introduced later to train or test the model. If you want to generate those files from scratch, you should first clone the repository [DeepDTA](https://github.com/hkmztrk/DeepDTA/tree/master) and copy the `data` directory to the `dataset` directory of this repository, and rename the copied `data` directory as `raw_data`. Then, run the code in the following files in sequence:
+Please download the [dataset](https://drive.google.com/file/d/18d1WAowPnz31t6FcJwlx4YEUmxPonZta/view?usp=drive_link) and [model](https://drive.google.com/file/d/1Y7bAdPmkY_a61ixDoBTRxWgVmY9tFNIy/view?usp=drive_link) files and unzip them. If you successfully downloaded and unzipped the files, you can skip the following data preprocessing steps and directly run the commands that will be introduced later to train or test the model. If you want to generate those files from scratch, you should first clone the repository [DeepDTA](https://github.com/hkmztrk/DeepDTA/tree/master) and copy the `data` directory to the `dataset` directory of this repository, and rename the copied `data` directory as `raw_data`. Then, run the code in the following files in sequence:
 
 * `utils.py`
 * `utils_mol_graph.py`
