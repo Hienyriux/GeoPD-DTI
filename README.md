@@ -23,7 +23,7 @@ When you run a file, you should sequentially uncomment one code line at the end 
 
 ### Train, Test, and Cross Validation
 You can train the model using the following command:
-`python geopd_dti.py --dataset_name davis --mode train --fold 0 --hidden_dim 128 --num_epoch 1000 --batch_size 256 --lr 0.001 --seed 0 --device cuda`
+`python geopd_dti.py --dataset_name davis --mode train --fold 0 --hidden_dim 128 --num_epoch 300 --batch_size 256 --lr 0.001 --seed 0 --device cuda`
 
 Here's the explanation of the arguments:
 * `--dataset_name`: the name of the dataset you want to use, and it can be `davis` or `kiba`.
